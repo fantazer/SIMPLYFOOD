@@ -1,0 +1,44 @@
+mixin header()
+	//block header
+	.header-wrap
+		.main-cont
+			.header
+				.logo
+					img(src="img/logo.svg", alt="")
+				.header-nav
+					-
+						var items = [
+							{name: "Меню", id: "#navMenu"},
+							{name: "Как это работает", id: "#navWork"},
+							{name: "Пробный день", id: "#navTest"},
+							{name: "Отзывы", id: "#navReview"},
+							{name: "FAQ", id: "#navFAQ"},
+							{name: "Доставка", id: "#navDelivery"},
+						];
+					each item in items
+						a(href=item.id).header-nav__el.js-scroll-to #{item.name}
+				a(href="tel:+7 925 907 35 12" ).phone +7 925 907 35 12
+				.callback.modal-get(data-modal="callBack") Перезвоните мне
+				.header-msg
+					.header-msg__el.modal-get(data-modal="callBack")
+						+icon("phone","icon")
+				.head-toggle.js-slide-block-toggle(data-menu="menu")
+					+icon("menu","icon icon-open")
+					+icon("close","icon icon-close")
+	// mobile menu
+	.slide-block.slide-block--right.slide-block--menu(data-menu="menu")
+		.slide-block-wrap.js-accordion
+			.slide-nav
+				-
+					var items = [
+						{name: "Меню", id: "#navMenu"},
+						{name: "Как это работает", id: "#navWork"},
+						{name: "Пробный день", id: "#navTest"},
+						{name: "Отзывы", id: "#navReview"},
+						{name: "FAQ", id: "#navFAQ"},
+						{name: "Доставка", id: "#navDelivery"},
+					];
+				each item in items
+					a(href = item.id).slide-nav__el.js-scroll-to #{item.name}
+
+	//block header end

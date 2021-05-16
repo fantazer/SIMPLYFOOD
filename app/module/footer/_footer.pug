@@ -1,0 +1,47 @@
+mixin footer()
+	//block footer
+	.footer
+		// footer top
+		.main-cont
+			.footer-top
+				.footer-contact
+					a(href="tel:+7 (925) 907-35-12").footer-phone +7 (925) 907-35-12
+					.footer-work Ежедневно: с 09-00 до 21-00
+				.soc-row.soc-row--monochrome.soc-row--footer
+					a(href="#").soc-row__el
+						+icon("soc-inst","icon")
+					a(href="#").soc-row__el
+						+icon("soc-vk","icon")
+					a(href="#").soc-row__el
+						+icon("soc-fb","icon")
+				.footer-info
+					.footer-address__info.mb-16 © 2020, Letbefit, все права защищены
+					a(href="#").link--mark Политика конфиденциальности
+				a(href="#header").js-scroll-to.footer-scroll
+					+icon("arrow-up","icon")
+		// footer top === end
+	.modal-layer
+		.modal-filter
+		.modal-wrap
+			//call Back
+			.modal(data-modal="callBack")
+				.modal-close
+					+icon("close","icon")
+				.modal-content
+					a(href="tel:8 (499) 110-12-15").modal-title.type--center 8 (499) 110-12-15
+					.btn-row.btn-row--col
+						a(href="tel:8 (499) 110-12-15").btn--sm.btn--mark.btn--full Позвонить
+						.btn--sm.btn--light.btn--full.modal-get(data-modal="getCall") Заказать звонок
+			//Get call
+			.modal(data-modal="getCall")
+				.modal-close
+					+icon("close","icon")
+				.modal-content
+					.modal-title Перезвоните мне
+					.input-row.input-row--validate
+						input(type="text" data-placeholder="Телефон" class="input" data-mask="8(000)000-00-00")
+						.input-msg В данных ошибка
+						+icon("close","icon icon-validate-false")
+						+icon("checked","icon icon-validate-true")
+					.btn--md.btn--mark.btn--full Отправить
+	//block footer end

@@ -1,0 +1,200 @@
+.icon {
+    font-size: 10px;
+}
+
+.icon:before {
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("../svg/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 8em 96.9em;
+}
+
+.no-svg .icon:before {
+    background-image: url("../svg/sprite.png");
+}
+
+
+
+  .icon.arrow-down:before {
+      background-position: 0em 0em;
+      width: 2.4em;
+      height: 2.4em;
+  }
+
+
+
+
+  .icon.arrow-left:before {
+      background-position: 0em -2.4em;
+      width: 2.4em;
+      height: 2.4em;
+  }
+
+
+
+
+  .icon.arrow-right:before {
+      background-position: 0em -4.8em;
+      width: 2.4em;
+      height: 2.4em;
+  }
+
+
+
+
+  .icon.arrow-up:before {
+      background-position: 0em -7.2em;
+      width: 2.4em;
+      height: 2.4em;
+  }
+
+
+
+
+  .icon.bag--color:before {
+      background-position: 0em -9.6em;
+      width: 8em;
+      height: 8em;
+  }
+
+
+
+
+  .icon.box--color:before {
+      background-position: 0em -17.6em;
+      width: 8em;
+      height: 8em;
+  }
+
+
+
+
+  .icon.checked:before {
+      background-position: 0em -25.6em;
+      width: 2.4em;
+      height: 2.4em;
+  }
+
+
+
+
+  .icon.chef--color:before {
+      background-position: 0em -28em;
+      width: 8em;
+      height: 8em;
+  }
+
+
+
+
+  .icon.close:before {
+      background-position: 0em -36em;
+      width: 2.4em;
+      height: 2.4em;
+  }
+
+
+
+
+  .icon.food--color:before {
+      background-position: 0em -38.4em;
+      width: 8em;
+      height: 8em;
+  }
+
+
+
+
+  .icon.menu:before {
+      background-position: 0em -46.4em;
+      width: 2.4em;
+      height: 2.4em;
+  }
+
+
+
+
+  .icon.phone:before {
+      background-position: 0em -48.8em;
+      width: 2.4em;
+      height: 2.4em;
+  }
+
+
+
+
+  .icon.soc-fb:before {
+      background-position: 0em -51.2em;
+      width: 2.4em;
+      height: 2.4em;
+  }
+
+
+
+
+  .icon.soc-inst:before {
+      background-position: 0em -53.6em;
+      width: 2.4em;
+      height: 2.4em;
+  }
+
+
+
+
+  .icon.soc-vk:before {
+      background-position: 0em -56em;
+      width: 2.4em;
+      height: 2.4em;
+  }
+
+
+
+
+  .icon.step-1--color:before {
+      background-position: 0em -58.4em;
+      width: 8em;
+      height: 8em;
+  }
+
+
+
+
+  .icon.step-2--color:before {
+      background-position: 0em -66.4em;
+      width: 8em;
+      height: 8em;
+  }
+
+
+
+
+  .icon.step-3--color:before {
+      background-position: 0em -74.4em;
+      width: 8em;
+      height: 8em;
+  }
+
+
+
+
+  .icon.subtract--color:before {
+      background-position: 0em -82.4em;
+      width: 5.9em;
+      height: 6.9em;
+  }
+
+
+
+
+  .icon.unoil--color:before {
+      background-position: 0em -89.3em;
+      width: 7.6em;
+      height: 7.6em;
+  }
+
+
+
+
+
