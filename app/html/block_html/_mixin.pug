@@ -29,3 +29,21 @@ mixin incr(state,className='')
       .incr__val-coner
     .incr__plus.incr__nav
       +icon("plus","icon")
+
+mixin item(i,type)
+  .program-el
+    .program-el__img(style="background-image:url('img/item-1.jpg')")
+    .program-el-wrap
+      .program-el__content
+        .program-el__title Смузи боул с яблоком, корицей и гранола
+        .program-el__text Филе куриное, лук, яйцо, специи, гречка зеленая, соус сливочный, грецкие орехи, сливочно-ореховый соус
+      .program-el__footer
+        .type--sm.type--secondary первый завтрак
+        .type--sm.type--secondary 106 Ккал
+
+
+mixin programList(program)
+  .program-list-container
+    .program-list
+      - for (var i=0;i<4;i++)
+        +item(1)

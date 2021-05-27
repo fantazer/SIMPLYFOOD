@@ -99,67 +99,46 @@ include block_html/_include.pug
 		.section#navMenu
 			.main-cont
 				.title.title--lgx Примерное меню на день по программе <br> Рациональное питание
-			// choose program
-			.main-cont
-				.g-row.js-tab-wrap
-					.g-xs-12.g-lg-12.g-xl-2
-						.roll-date.js-tick-cont
-							.roll-date__el.active.js-tick.js-tab 8 марта / Понедельник
-							.roll-date__el.js-tick.js-tab 9 марта / Вторник
-							.roll-date__el.js-tick.js-tab 10 марта / Среда
-							.roll-date__el.js-tick.js-tab 11 марта / Четверг
-							.roll-date__el.js-tick.js-tab 12 марта / Пятница
-							.roll-date__el.js-tick.js-tab 13 марта / Суббота
-							.roll-date__el.js-tick.js-tab 14 марта / Воскресенье
-					.g-xs-12.g-lg-12.g-xl-10.js-tab-cont.active.roll
-						.g-row
-							.roll-content.g-xs-12.g-lg-8.g-xl-8
-								.roll-kkal 1300 ккал
-								- for (var i=0;i<3;i++)
-									.roll-el
-										.type--secondary.mb-12 Завтрак / 356 ккал
-										.type--md Пшёная каша с яблочным пюре и семенами чиа
-									.roll-el
-										.type--secondary.mb-12 Полдник / 202 ккал
-										.type--md Чиа пудинг на кокосовом молоке с манго
-							.program-banner.g-lg-4.g-xl-4
-								.program-banner-inner
-									img(src="img/chef.svg", alt="").program-banner__img
-									.program-banner__cost 180
-									.program-banner__text руб/день
-									a(href="#" class= program ? "mb-24" : '').btn--md.btn--mark Заказать
-							.program-banner.program-banner--mobile
-								.program-banner-inner
-									img(src="img/chef.svg", alt="").program-banner__img
-									.program-banner__cost 180
-									.program-banner__text руб/день
-									a(href="#").btn--md.btn--mark Заказать
-					.roll.g-xs-12.g-lg-12.g-xl-10.js-tab-cont
-						.g-row
-							.roll-content.g-xs-12.g-lg-8.g-xl-8
-								.roll-kkal 2300 ккал
-								- for (var i=0;i<3;i++)
-									.roll-el
-										.type--secondary.mb-12 Обед / 356 ккал
-										.type--md Пшёная каша с яблочным пюре и семенами чиа
-									.roll-el
-										.type--secondary.mb-12 Полдник / 202 ккал
-										.type--md Чиа пудинг на кокосовом молоке с манго
-							.program-banner.g-lg-4.g-xl-4
-								.program-banner-inner
-									img(src="img/chef.svg", alt="").program-banner__img
-									.program-banner__cost 280
-									.program-banner__text руб/день
-									a(href="#" class= program ? "mb-24" : '').btn--md.btn--mark Заказать
+				// program list
+				.program-list-wrap.mb-48
+					// Если это программа 21 день добавь класс .program-list-header--extend
+					.program-list-header
+						// program days
+						.program-days.js-tick-cont
+							-
+								var items = [	'Пн','Вт','Ср','Чт','Пт','Сб'];
+							each item,i in items
+								.program-days__el.js-tick(class=i===0 ? 'active' : '') #{item}
+						// program days === end
+						// program consist
+						.program-consist
+							.program-consist__el
+								.program-consist__el-val 2312
+								.program-consist__el-type Ккал
+							.program-consist__el
+								.program-consist__el-val 456
+								.program-consist__el-type Белки
+							.program-consist__el
+								.program-consist__el-val 326,9
+								.program-consist__el-type Жиры
+							.program-consist__el
+								.program-consist__el-val 458
+								.program-consist__el-type Углеводы
+						// program consist === end
+					+programList("true")
 
-							.program-banner.program-banner--mobile
-								.program-banner-inner
-									img(src="img/chef.svg", alt="").program-banner__img
-									.program-banner__cost 280
-									.program-banner__text руб/день
-									a(href="#").btn--md.btn--mark Заказать
+				.program-banner.g-lg-4.g-xl-4
+					.program-banner-inner
+						img(src="img/chef.svg", alt="").program-banner__img
+						.program-banner__cost 280 руб/прием
+						a(href="#" class= program ? "mb-24" : '').btn--md.btn--mark Заказать
+				.program-banner.program-banner--mobile
+					.program-banner-inner
+						img(src="img/chef.svg", alt="").program-banner__img
+						.program-banner__cost 280
+						.program-banner__text руб/день
+						a(href="#").btn--md.btn--mark Заказать
 		// construct === end
-
 
 		// structure
 		.section-sm

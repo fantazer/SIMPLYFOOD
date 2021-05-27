@@ -2027,11 +2027,13 @@ body > svg {
     font-size: 10px;
   }
 }
-.type--smx {
+.type--smx,
+.program-days__el {
   font-size: 14px;
 }
 @media only screen and (max-width: 768px) {
-  .type--smx {
+  .type--smx,
+  .program-days__el {
     font-size: 12px;
   }
 }
@@ -2063,7 +2065,6 @@ h5,
 .work-step__el-title,
 .invite-subs-text,
 .accordion__el-head-text,
-.program-banner__text,
 .tab__el--lg {
   font-size: 20px;
 }
@@ -2080,7 +2081,6 @@ h5,
   .work-step__el-title,
   .invite-subs-text,
   .accordion__el-head-text,
-  .program-banner__text,
   .tab__el--lg {
     font-size: 18px;
   }
@@ -2103,6 +2103,7 @@ h4,
 .title--lg,
 h3,
 .structure__el span,
+.program-banner__cost,
 .footer-phone {
   font-size: 32px;
 }
@@ -2111,6 +2112,7 @@ h3,
   .title--lg,
   h3,
   .structure__el span,
+  .program-banner__cost,
   .footer-phone {
     font-size: 24px;
   }
@@ -2136,16 +2138,14 @@ h2,
 .type--xl,
 .title--xl,
 h1,
-.page-error__title,
-.program-banner__cost {
+.page-error__title {
   font-size: 64px;
 }
 @media only screen and (max-width: 768px) {
   .type--xl,
   .title--xl,
   h1,
-  .page-error__title,
-  .program-banner__cost {
+  .page-error__title {
     font-size: 44px;
   }
 }
@@ -5145,11 +5145,13 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin-left: auto;
 }
 @media only screen and (max-width: 640px) {
   .program-consist {
     min-width: auto;
     width: 80%;
+    margin: 20px 0 0 0;
   }
 }
 .program-consist__el {
@@ -5211,6 +5213,9 @@ body {
   background: linear-gradient(98.95deg, #e3eeff 0%, #e4f6e4 52.6%, #ffeee4 100%);
   border-radius: 12px;
   padding: 12px;
+  max-width: 686px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media only screen and (max-width: 1024px) {
   .program-banner {
@@ -5224,30 +5229,20 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column;
-      -ms-flex-flow: column;
-          flex-flow: column;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 20px;
+  padding: 20px 5%;
 }
 .program-banner__img {
   width: 64px;
   height: 64px;
-  margin-bottom: 20px;
+  margin-right: 20px;
 }
 .program-banner__cost {
   font-weight: 700;
   color: #111;
-}
-.program-banner__text {
-  font-weight: 700;
-  color: #111;
-  margin-bottom: 40px;
+  margin-right: auto;
 }
 .program-banner--mobile {
   display: block;
@@ -5848,6 +5843,89 @@ body {
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
+}
+.program-list-header {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+}
+@media only screen and (max-width: 1024px) {
+  .program-list-header {
+    margin-bottom: 32px;
+  }
+}
+@media only screen and (max-width: 740px) {
+  .program-list-header {
+    -webkit-flex-flow: column;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.program-days {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: auto;
+}
+@media only screen and (max-width: 1024px) {
+  .program-days {
+    margin-right: initial;
+  }
+}
+.program-days__el {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 42px;
+  height: 44px;
+  border-radius: 20px;
+  margin-right: 12px;
+  transition: all 0.4s;
+  font-weight: 700;
+  color: #111;
+  border: 1px solid #dcdfe8;
+  background: #fff;
+}
+@media only screen and (max-width: 640px) {
+  .program-days__el {
+    margin-right: 6px;
+  }
+}
+.program-days__el:hover {
+  cursor: pointer;
+}
+.program-days__el:hover {
+  border: 1px solid #7eca1d;
+}
+.program-days__el.active {
+  border: 1px solid #7eca1d;
+  background: #7eca1d;
+  color: #fff;
+}
+.program-days__el:last-child {
+  margin-right: 0;
 }
 @-webkit-keyframes slideInDown {
   from {

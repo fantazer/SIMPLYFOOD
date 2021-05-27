@@ -1150,7 +1150,9 @@ slider-create-mobile()
 	+below(640px)
 		min-width auto
 		width: 80%
+		margin 20px 0 0 0
 	f()
+	margin-left auto
 .program-consist__el
 	padding: 0 10px
 	flex-grow 1
@@ -1185,27 +1187,24 @@ slider-create-mobile()
 	background: linear-gradient(98.95deg, #E3EEFF 0%, #E4F6E4 52.6%, #FFEEE4 100%)
 	br(12px)
 	padding: 12px
+	max-width 686px
+	margin-left auto
+	margin-right auto
 .program-banner-inner
 	background: white
 	height: 100%
 	f()
-	fl()
 	align-items center
-	justify-content center
-	padding: 20px
+	padding: 20px 5%
 
 .program-banner__img
 	size 64px
-	margin-bottom: 20px
+	margin-right: 20px
 .program-banner__cost
-	@extend .type--xl
+	@extend .type--lg
 	font-weight 700
 	color black
-.program-banner__text
-	@extend .type--md
-	font-weight 700
-	color black
-	margin-bottom: 40px
+	margin-right auto
 
 .program-banner--mobile
 	+above(1025px)
@@ -1551,3 +1550,45 @@ slider-create-mobile()
 		transform scale(1)
 
 // roll === end
+
+// program
+.program-list-header
+	+below(1024px)
+		margin-bottom: 32px
+	+below(740px)
+		fl()
+		flex(mid)
+	fw()
+	f()
+	align-items center
+	margin-bottom: 40px
+
+.program-days
+	+below(1024px)
+		margin-right:initial
+	f()
+	margin-right auto
+.program-days__el
+	+below(640px)
+		margin-right: 6px
+	flex(mid)
+	size 42px 44px
+	br(20px)
+	margin-right: 12px
+	cp()
+	tr()
+	@extend .type--smx
+	font-weight 700
+	color black
+	border 1px solid $border-color
+	background: white
+	&:hover
+		border 1px solid $mark
+	&.active
+		border 1px solid $mark
+		background: $mark
+		color white
+	&:last-child
+		margin-right: 0
+
+// program === end
