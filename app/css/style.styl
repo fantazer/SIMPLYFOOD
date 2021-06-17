@@ -4,10 +4,15 @@
 @import "variable/_ie.styl"
 @import "variable/_helper.styl"
 @import "variable/_default.styl"
+
+@import "variable/config/_config.styl"
+@import "grid/grid.css"
+
 @import "variable/config/_color.styl"
 @import "variable/config/_typography.styl"
 @import "variable/config/_btn.styl"
 @import "variable/config/_input.styl"
+@import "variable/config/_grid.styl"
 @import "../module/**/*"
 
 body
@@ -121,7 +126,7 @@ body
 	width 100%
 	margin 0
 	animation:  slideInDown  1s 1 ease-in-out;
-	z-index 100
+	z-index 1000
 // animate top menu === end
 
 // error
@@ -328,7 +333,7 @@ body
 .header-wrap
 	background: white
 	box-shadow: 0px 4px 8px rgba(102, 130, 185, 0.12);
-
+	z-index 1000
 .header
 	+below(1200px)
 		height: 60px
@@ -376,8 +381,9 @@ body
 // soc inst === end
 
 .logo
-	+below(640px)
-		width: 35%
+	+below(480px)
+		size 38px
+		min-width 38px
 	width: 200px
 
 .phone
@@ -404,6 +410,10 @@ body
 
 .header-nav__el
 	@extend .link
+
+.header-cost
+	+below(640px)
+		font-size: 14px
 
 .header-msg
 	+above(1281px)
@@ -1592,3 +1602,14 @@ slider-create-mobile()
 		margin-right: 0
 
 // program === end
+
+// artcile
+.article-note
+	position absolute
+	padding-left: 16px
+	border-left 3px solid $mark
+	width: 280px
+	right: 0
+	top 50%
+	transform translate(calc(100% + 20px),-50%)
+// artcile === end

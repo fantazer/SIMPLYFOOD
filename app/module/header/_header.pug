@@ -3,8 +3,9 @@ mixin header()
 	.header-wrap
 		.main-cont
 			.header
-				.logo
-					img(src="img/logo.svg", alt="")
+				.logo.f.f-mid
+					img(src="img/logo.svg", alt="").sm__hide
+					img(src="img/logo-sm.svg", alt="").sm__show
 				.header-nav
 					-
 						var items = [
