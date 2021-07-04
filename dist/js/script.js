@@ -321,7 +321,7 @@ $(document).ready(function () {
 
 	// animate scroll to id
 	$(".js-scroll-to").mPageScroll2id({
-		offset:50,
+		offset:100,
 	});
 	$(".slide-nav .js-scroll-to").click(function(){
 		$('.slide-block').removeClass('slide-block--open');

@@ -1963,6 +1963,11 @@ body > svg {
 .bg-gradient {
   background: linear-gradient(98.95deg, #e3eeff 0%, #e4f6e4 52.6%, #ffeee4 100%);
 }
+.bg-full {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
 .bg-mark {
   background: #7eca1d;
 }
